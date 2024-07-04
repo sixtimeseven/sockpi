@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket) {
 	socket.on('light', function(data) {
 		lightValue = data;
 		// only change the LED if the status has changed
-		if (lightValue != LED.readSync()) {
+		if (lightValue !== LED.readSync()) {
 			LED.writeSync(lightValue);
 		}
 	});
