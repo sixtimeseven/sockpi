@@ -6,6 +6,7 @@ const Gpio = require('onoff').Gpio;
 // require socket.io and pass the server object
 const io = require('socket.io')(server)
 
+// add 571 to pin # for correct RPi5 pinout https://github.com/fivdi/onoff/pull/204
 const ledPin = 17 + 571;
 const btnPin = 22 + 571;
 
